@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Index from "./views/index.vue";
+import EditorIndex from './views/editorIndex.vue';
+import CheckIndex from './views/checkIndex.vue';
+// import Index from "./views/index.vue"
 
 Vue.use(Router);
 
@@ -8,8 +11,18 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      name: "index",
+      component: Index
+    },
+    {
+      path: '/EditorIndex',
+      name: 'EditorIndex',
+      component: EditorIndex
+    },
+    {
+      path: '/CheckIndex',
+      name: 'CheckIndex',
+      component: CheckIndex
     },
     {
       path: "/about",
