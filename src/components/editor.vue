@@ -7,26 +7,16 @@
     ></quill-editor>
   </div>
 </template>
-<script>
-export default {
-  name: "editor",
-  props: {
-    quillClass: {
-      type: Object
-    }
-  },
-  data() {
-    return {
-      editorData: ""
-    };
-  },
-  methods: {
-    onEditorBlur(event) {
-      console.log(this.editorData);
-      console.log(event);
-    }
+<script lang="ts">
+import { Component, Vue, Prop } from "vue-property-decorator";
+@Component
+export default class editor extends Vue {
+  @Prop({ type: Object }) public quillClass!: Object;
+  public editorData: String = "";
+  public onEditorBlur(event: any) {
+    this.$emit("onEditorBlur", this.editorData);
   }
-};
+}
 </script>
 <style lang="less" scoped>
 .com-editor {

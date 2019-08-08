@@ -3,6 +3,8 @@ import Router from "vue-router";
 import Index from "./views/index.vue";
 import EditorIndex from './views/editorIndex.vue';
 import CheckIndex from './views/checkIndex.vue';
+import ShowIndex from './views/showIndex.vue';
+// import canvanStart from './components/canvanStart.vue';
 // import Index from "./views/index.vue"
 
 Vue.use(Router);
@@ -25,13 +27,9 @@ export default new Router({
       component: CheckIndex
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+      path: '/ShowIndex',
+      name: 'ShowIndex',
+      component: ShowIndex
     }
   ]
 });

@@ -1,31 +1,26 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-26 19:51:43
+ * @LastEditTime: 2019-08-08 20:54:44
+ * @LastEditors: Please set LastEditors
+ -->
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <router-link to="/">Home</router-link> |
-      <router-link to="/messageheader">About</router-link> -->
-    </div>
     <router-view />
   </div>
 </template>
-
+<script>
+import { Component, Vue, Emit } from "vue-property-decorator";
+import canvanStart from "./components/canvanStart.vue";
+@Component({
+  components: {
+    canvanStart
+  }
+})
+export default class App extends Vue {}
+</script>
 <style lang="less">
-// #app {
-//   font-family: "Avenir", Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-//   text-align: center;
-//   color: #2c3e50;
-// }
-// #nav {
-//   padding: 30px;
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 /* 修改默认的样式 */
 body {
   margin: 0;
@@ -49,5 +44,12 @@ h1 {
 }
 ul {
   list-style-type: none;
+}
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 </style>
